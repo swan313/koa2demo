@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}Messages{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li>添加信息</li>
+        </ol>
+        <form>
+            <div class="form-group">
+                <label>图书名称</label>
+                <input type="text" name="name" class="form-control" placeholder="请输入图书名称" value="">
+            </div>
+
+            <div class="form-group">
+                <label>图书编号</label>
+                <input type="text" name="age" class="form-control" placeholder="请输入图书编号" value="">
+            </div>
+
+            <div class="form-group">
+                <label>图书内容</label>
+                <input type="text" name="sex" class="form-control" placeholder="请输入图书内容，只接收数字">
+            </div>
+
+            <div id="add-book" class="btn btn-primary">创建</button></div>
+
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block title %}Messages{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li>修改信息</li>
+        </ol>
+        <form class="edit">
+            <div class="form-group">
+                <label>图书名称</label>
+                <input type="text" name="name" class="form-control" placeholder="请输入图书名称" value="">
+            </div>
+
+            <div class="form-group">
+                <label>图书描述</label>
+                <input type="text" name="age" class="form-control" placeholder="请输入图书编号" value="">
+            </div>
+
+            <div class="form-group">
+                <label>图书内容</label>
+                <input type="text" name="sex" class="form-control" placeholder="请输入图书内容，只接收数字">
+            </div>
+
+            <div id="update-book" class="btn btn-primary">修改</button></div>
+
+        </form>
+    </div>
+</div>
+<script>
+    //读取cookies
+    function getCookie(name) {
+        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+
+        if (arr = document.cookie.match(reg))
+
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+
+    var str  = getCookie('name');
+    if(str != null){
+        $("  input[ name='name' ] ").val(decodeURIComponent(str));
+        $("  input[ name='age' ] ").val(getCookie('age'));
+        $("  input[ name='sex' ] ").val(getCookie('sex'));
+    }
+</script>
+
+
+
+
+{% endblock %}

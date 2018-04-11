@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Messages{% endblock %}</title>
+  <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/index.css">
+  <script src="scripts/jquery.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/index">信息管理系统</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/list">浏览信息</a></li>
+        <li><a href="/add">添加信息</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <section id="content">
+    {% block content %}
+      <p>Forgot to add content?</p>
+    {% endblock %}
+  </section>
+
+
+  <script src="scripts/axios.min.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>

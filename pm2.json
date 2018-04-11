@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "koa2-app",
+      "script": "app.js",
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "out_file": "log/node-app.stdout.log",
+      "watch": true,
+      "instance": "max",
+      "exec_mode": "cluster"
+    }
+  ]
+}
